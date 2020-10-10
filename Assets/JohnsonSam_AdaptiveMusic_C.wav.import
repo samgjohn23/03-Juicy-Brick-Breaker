@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/JohnsonSam_AdaptiveMusic_C.wav-176ed0bd60536ea9e1e18ddc9d96a14c.sample"
+
+[deps]
+
+source_file="res://Assets/JohnsonSam_AdaptiveMusic_C.wav"
+dest_files=[ "res://.import/JohnsonSam_AdaptiveMusic_C.wav-176ed0bd60536ea9e1e18ddc9d96a14c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

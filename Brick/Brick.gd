@@ -12,13 +12,13 @@ export var fall_speed = 1.0
 var dying = false
 
 var colors = [
-	Color8(224,49,49)		#Red 8
-	,Color8(253,126,20)		#Orange 6
-	,Color8(255,224,102)		#Yellow 3
-	,Color8(148,216,45)		#Lime 5
-	,Color8(34,139,230)		#Blue 6
-	,Color8(190,75,219)		#Violet 5
-	,Color8(132,94,247)		#Grape 6
+	Color8(200, 92, 92)
+	,Color8(110, 33, 16) 
+	,Color8(255, 160, 122)
+	,Color8(233, 150, 122)
+	,Color8(250, 128, 114)
+	,Color8(240, 128, 128)
+	,Color8(205, 92, 92)
 ]
 onready var textures = [
 	load("res://Assets/smoke0.png")

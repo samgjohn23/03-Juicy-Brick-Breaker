@@ -22,7 +22,7 @@ func _ready():
 
 func update_color():
 	if HUD.color_ball:
-		$Color.color = Color8(34,184,207)
+		$Color.color = Color8(100,30,207)
 	else:
 		$Color.color = Color(1,1,1,1)
 	if HUD.particle_ball:

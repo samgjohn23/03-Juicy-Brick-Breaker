@@ -3,10 +3,10 @@ extends ColorRect
 onready var HUD = get_node("/root/Game/HUD")
 var c = 0
 var colors = [
-	Color8(0,0,0)			#black
-	,Color8(33,37,41)		#gray 9
-	,Color8(52,58,64)		#gray 8
-	,Color8(33,37,41)		#gray 9
+	Color8(0,0,0)	
+	,Color8(33,37,41)	
+	,Color8(99,58,1)	
+	,Color8(77,80,44)
 ]
 
 
@@ -20,7 +20,7 @@ func update_color():
 		$Tween.interpolate_property(self, "color", color, colors[c], $Timer.wait_time-0.01, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		$Tween.start()
 	else:
-		color = Color(0,0,0,1)
+		color = Color(10,43,0,8)
 
 func _on_HUD_changed():
 	update_color()

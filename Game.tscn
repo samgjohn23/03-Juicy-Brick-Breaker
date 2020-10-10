@@ -19,7 +19,7 @@
 [ext_resource path="res://Audio/Music.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Brick.wav" type="AudioStream" id=18]
 [ext_resource path="res://Assets/Wall.wav" type="AudioStream" id=19]
-[ext_resource path="res://Assets/Music.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Assets/JohnsonSam_aabacaEDM.wav" type="AudioStream" id=20]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
@@ -115,7 +115,7 @@ margin_left = -200.0
 margin_top = -200.0
 margin_right = 1275.0
 margin_bottom = 968.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.21875, 0.0442868, 0.0442868, 1 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -221,7 +221,7 @@ __meta__ = {
 script = ExtResource( 11 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 21 )
+stream = ExtResource( 20 )
 script = ExtResource( 17 )
 
 [node name="Effect_Paddle" type="AudioStreamPlayer" parent="."]

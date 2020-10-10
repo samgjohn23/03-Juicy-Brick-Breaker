@@ -8,7 +8,7 @@ export var H = 7
 export var top_margin = 100
 export var margin = 3
 
-var B = Vector2(90,30)
+var B = Vector2(100,40)
 
 
 func _ready():
