@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=2]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.905457
+margin_bottom = -0.905457
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 300.0
+text = "BRICK BREAKER"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Play" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 300.9
+margin_right = 612.0
+margin_bottom = 360.9
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 411.094
+margin_top = 379.094
+margin_right = 611.094
+margin_bottom = 439.094
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

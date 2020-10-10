@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mouth.png-f46a4e722fe137c17930220ae1593713.stex"
+path="res://.import/fire.png-aa1fee84a45cd9bdded30a686f714d35.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mouth.png"
-dest_files=[ "res://.import/mouth.png-f46a4e722fe137c17930220ae1593713.stex" ]
+source_file="res://Assets/fire.png"
+dest_files=[ "res://.import/fire.png-aa1fee84a45cd9bdded30a686f714d35.stex" ]
 
 [params]
 

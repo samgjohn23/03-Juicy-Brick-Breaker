@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu/Die.gd" type="Script" id=1]
+
+[node name="Menu " type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.89978
+margin_right = -0.89978
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 429.24
+margin_top = 231.616
+margin_right = 596.24
+margin_bottom = 291.616
+text = "You Died!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 299.1
+margin_right = 612.0
+margin_bottom = 359.1
+text = "Play Again?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 380.0
+margin_right = 612.0
+margin_bottom = 440.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

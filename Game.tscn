@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Paddle/Paddle.gd" type="Script" id=1]
 [ext_resource path="res://Ball/Ball_Container.gd" type="Script" id=2]
@@ -6,20 +6,19 @@
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=4]
 [ext_resource path="res://Walls/Walls.gd" type="Script" id=5]
 [ext_resource path="res://Background/Background.gd" type="Script" id=6]
-[ext_resource path="res://Assets/confetti.png" type="Texture" id=7]
-[ext_resource path="res://Assets/bubble.png" type="Texture" id=8]
+[ext_resource path="res://Assets/eye2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/fire.png" type="Texture" id=8]
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=9]
 [ext_resource path="res://Ball/Trail_Container.gd" type="Script" id=10]
 [ext_resource path="res://Camera/WorldEnvironment.gd" type="Script" id=11]
 [ext_resource path="res://Paddle/Face.gd" type="Script" id=12]
-[ext_resource path="res://Assets/mouth.png" type="Texture" id=13]
-[ext_resource path="res://Assets/pupil.png" type="Texture" id=14]
-[ext_resource path="res://Assets/eye.png" type="Texture" id=15]
+[ext_resource path="res://Assets/mouth3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/sparks.png" type="Texture" id=14]
+[ext_resource path="res://Assets/hitsound.wav" type="AudioStream" id=15]
 [ext_resource path="res://Assets/Datalegreya-Thin.otf" type="DynamicFontData" id=16]
 [ext_resource path="res://Audio/Music.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Brick.wav" type="AudioStream" id=18]
 [ext_resource path="res://Assets/Wall.wav" type="AudioStream" id=19]
-[ext_resource path="res://Assets/Paddle.wav" type="AudioStream" id=20]
 [ext_resource path="res://Assets/Music.ogg" type="AudioStream" id=21]
 
 [sub_resource type="Gradient" id=1]
@@ -135,6 +134,7 @@ script = ExtResource( 5 )
 polygon = PoolVector2Array( 0, 0, 0, 768, 1024, 768, 1024, 0, 64, 0, 64, -64, 1088, -64, 1088, 832, -64, 832, -64, -64, 64, -64, 64, 0 )
 
 [node name="Particles2D" type="Particles2D" parent="Walls"]
+scale = Vector2( 0.4, 0.4 )
 emitting = false
 lifetime = 0.4
 one_shot = true
@@ -169,28 +169,17 @@ script = ExtResource( 12 )
 
 [node name="Eye_left" type="Sprite" parent="Paddle_Container/Paddle/Face"]
 position = Vector2( -35, -10 )
-texture = ExtResource( 15 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 7 )
 
 [node name="Eye_right" type="Sprite" parent="Paddle_Container/Paddle/Face"]
 position = Vector2( 35, -10 )
-texture = ExtResource( 15 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 7 )
 
-[node name="Pupil_Left" type="Node2D" parent="Paddle_Container/Paddle/Face"]
-position = Vector2( -35, -10 )
-
-[node name="Sprite" type="Sprite" parent="Paddle_Container/Paddle/Face/Pupil_Left"]
-position = Vector2( 10, 0 )
-texture = ExtResource( 14 )
-
-[node name="Pupil_Right" type="Node2D" parent="Paddle_Container/Paddle/Face"]
-position = Vector2( 35, -10 )
-
-[node name="Sprite" type="Sprite" parent="Paddle_Container/Paddle/Face/Pupil_Right"]
-position = Vector2( 10, 0 )
-texture = ExtResource( 14 )
-
-[node name="Sprite" type="Sprite" parent="Paddle_Container/Paddle/Face"]
+[node name="Mouth" type="Sprite" parent="Paddle_Container/Paddle/Face"]
 position = Vector2( 0, 20 )
+scale = Vector2( 0.03, 0.03 )
 texture = ExtResource( 13 )
 
 [node name="Particles2D" type="Particles2D" parent="Paddle_Container"]
@@ -200,7 +189,7 @@ amount = 6
 lifetime = 0.4
 one_shot = true
 process_material = SubResource( 15 )
-texture = ExtResource( 7 )
+texture = ExtResource( 14 )
 
 [node name="Trail_Container" type="Node2D" parent="."]
 script = ExtResource( 10 )
@@ -236,7 +225,7 @@ stream = ExtResource( 21 )
 script = ExtResource( 17 )
 
 [node name="Effect_Paddle" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 20 )
+stream = ExtResource( 15 )
 
 [node name="Effect_Wall" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
@@ -265,7 +254,7 @@ margin_left = -10.0
 margin_top = -10.0
 margin_right = 275.0
 margin_bottom = 778.0
-color = Color( 0.286275, 0.313726, 0.341176, 1 )
+color = Color( 0.180392, 0.282353, 0.388235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
